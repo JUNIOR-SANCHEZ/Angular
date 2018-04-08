@@ -3,6 +3,7 @@
 <p>{{fecha | date:'fullDate' | uppercase | lowercase}}</p>
 <p>{{fecha | date:'dd/MM/yyyy'}}</p>
 <p>{{nombre | uppercase | lowercase}}</p>
+<p>{{5 | conversor:8}}</p>
 <input type="text" [(ngModel)]="newRopa"/><button (click)="addRopa()">Agregar Prenda</button>
 <p *ngIf="newRopa">La prenda a guardar es: <strong>{{newRopa}}</strong>.</p>
 <ul>
