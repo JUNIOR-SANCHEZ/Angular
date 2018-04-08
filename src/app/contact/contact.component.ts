@@ -22,4 +22,10 @@ export class ContactComponent implements OnInit {
     });
   }
 
+  redirigir(){
+    this._router.navigate(['/contact','julioSanchezweb.es']);
+  }
+  redirigir2(){
+    this._router.navigate(['/home']);
+  }
 }
