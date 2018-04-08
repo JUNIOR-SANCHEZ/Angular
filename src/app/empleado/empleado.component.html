@@ -1,6 +1,6 @@
 
-<h1>{{title}}</h1>
-<h2>Selector de colores</h2>
+<h2>{{title}}</h2>
+<h3>Selector de colores</h3>
 <button (click)="logColorSelected()">Mostrar Log</button>
 <input type="text" [(ngModel)]="colorSelected"/>
 <pre 
@@ -50,10 +50,10 @@
   </li>
 </ul>
 <hr>
-<h2>Directivas Estructurales</h2>
+<h3>Directivas Estructurales</h3>
 <button (click)="changeWorker(externalWorker=!externalWorker)">{{externalWorker ? 'Mostrar Lista de Trabajadores' : 'Mostrar Empleado'}}</button>
 <div *ngIf="externalWorker == true">
-  <h3>Empleado</h3>
+  <h4>Empleado</h4>
   <ul>
     <li>
       <strong>Name: </strong>{{employee.name}}</li>

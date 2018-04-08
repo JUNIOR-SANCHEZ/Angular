@@ -13,7 +13,7 @@ export class EmpleadoComponent implements OnInit {
   public color:string;
   public colorSelected:string;
   constructor() {
-    this.title = "Curso de Angular";
+    this.title = "Componente Empleado";
     this.employee = new Employee("Julio Sánchez",26,"Programador",false);
     this.workers=[
       new Employee("Juan Aguirre",28,"Programador",true),
