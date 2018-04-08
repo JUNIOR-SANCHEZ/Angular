@@ -27,3 +27,31 @@
       <strong>Contract: </strong>{{worker.hired ? 'Contratado' : 'No esta contratado'}}</li>
   </ul>
 </div>
+<hr>
+<h3>Colores Switch</h3>
+<ul [ngSwitch]="color">
+  <li *ngSwitchCase="'red'" [ngStyle]="{
+    'background':color,
+    'color':'white',
+    'padding':'20px'
+  }">
+    Es de color
+    <strong>Rojo</strong>
+  </li>
+  <li *ngSwitchCase="'green'" [ngStyle]="{
+    'background': color,
+    'color': 'white',
+    'padding':'20px'
+  }">
+    Es de Color
+    <strong>Verde</strong>
+  </li>
+  <li *ngSwitchCase="'blue'" [ngStyle]="{
+    'background': color,
+    'color': 'white',
+    'padding':'20px'
+  }">
+    Es de Color
+    <strong>Azul</strong>
+  </li>
+</ul>
