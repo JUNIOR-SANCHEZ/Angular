@@ -19,7 +19,7 @@ export class EmpleadoComponent implements OnInit {
       new Employee("Lorena Zambrano",24,"Farmaceutica",false),
       new Employee("Monica Sanchez",25,"Secretaria",true)
     ];
-    this.externalWorker = false;
+    this.externalWorker = true;
    }
 
   ngOnInit() {

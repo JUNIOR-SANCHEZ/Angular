@@ -1,5 +1,5 @@
 <h2>{{title}}</h2>
-<button (click)="changeWorker(externalWorker=!externalWorker)">{{externalWorker ? 'Mostrar Trabajador' : 'Mostrar Empleado'}}</button>
+<button (click)="changeWorker(externalWorker=!externalWorker)">{{externalWorker ? 'Mostrar Lista de Trabajadores' : 'Mostrar Empleado'}}</button>
 <div *ngIf="externalWorker == true">
   <h3>Empleado</h3>
   <ul>
@@ -14,15 +14,16 @@
   </ul>
 </div>
 <div *ngIf="externalWorker == false">
-  <h3>Trabajadores</h3>
-  <ul>
+  <h3>Lista de Trabajadores</h3>
+  <ul *ngFor="let worker of workers; index as i">
+    <strong>Empleado {{i+1}}:</strong>
     <li>
-      <strong>Name: </strong>{{workers[0].name}}</li>
+      <strong>Name: </strong>{{worker.name}}</li>
     <li>
-      <strong>Age: </strong>{{workers[0].age}}</li>
+      <strong>Age: </strong>{{worker.age}}</li>
     <li>
-      <strong>Position: </strong>{{workers[0].position}}</li>
+      <strong>Position: </strong>{{worker.position}}</li>
     <li>
-      <strong>Contract: </strong>{{workers[0].hired ? 'Contratado' : 'No esta contratado'}}</li>
+      <strong>Contract: </strong>{{worker.hired ? 'Contratado' : 'No esta contratado'}}</li>
   </ul>
 </div>
