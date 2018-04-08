@@ -12,11 +12,13 @@ export class HomeComponent implements OnInit {
   public listRopa: Array<string>;
   public newRopa: string;
   public fecha;
+  public nombre:string;
   constructor(
     private _ropaService: RopaService
   ) {
     this.title = "Componente Home";
     this.fecha = new Date(2018,4,8);
+    this.nombre = "Julio Sánchez Gaona";
    }
 
   ngOnInit() {
