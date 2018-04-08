@@ -1,3 +1,9 @@
 .fondoBlue{
     background-color: lightblue !important;
 }
+.fondoGreen{
+    background-color: lightgreen !important;
+}
+.letraGrande{
+    font-size: 2rem;
+}

@@ -5,7 +5,11 @@
 <input type="text" [(ngModel)]="colorSelected"/>
 <pre 
 [style.border]="colorSelected == 'red' ? '5px solid #000' : '1px solid #ff5722'" 
-[class.fondoBlue]="colorSelected == 'blue'">
+[ngClass]="{
+  fondoBlue: colorSelected == 'blue',
+  fondoGreen: colorSelected == 'green',
+  letraGrande: 1 == 1
+}">
   <strong>Color Elegido: </strong>
     {{colorSelected}}
 </pre>
