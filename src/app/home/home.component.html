@@ -1,5 +1,7 @@
 <h2><strong>{{title}}</strong></h2>
-<br>
+<p>{{fecha}}</p>
+<p>{{fecha | date:'fullDate'}}</p>
+<p>{{fecha | date:'dd/MM/yyyy'}}</p>
 <input type="text" [(ngModel)]="newRopa"/><button (click)="addRopa()">Agregar Prenda</button>
 <p *ngIf="newRopa">La prenda a guardar es: <strong>{{newRopa}}</strong>.</p>
 <ul>
