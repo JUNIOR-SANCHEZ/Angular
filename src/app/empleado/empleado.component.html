@@ -1,4 +1,50 @@
-<h2>{{title}}</h2>
+
+<h1>{{title}}</h1>
+<h2>Selector de colores</h2>
+<button (click)="logColorSelected()">Mostrar Log</button>
+<input type="text" [(ngModel)]="colorSelected"/>
+<pre>
+  <strong>Color Elegido: </strong>
+    {{colorSelected}}
+</pre>
+<div [ngStyle]="{
+  'background':colorSelected,
+  'width':'200px',
+  'height':'200px',
+  'float':'right',
+  'margin-right':'73%'
+}"></div>
+<div style="clear: both;"></div>
+<hr>
+<h2>Colores Switch</h2>
+<ul [ngSwitch]="color">
+  <li *ngSwitchCase="'red'" [ngStyle]="{
+    'background':color,
+    'color':'white',
+    'padding':'20px'
+  }">
+    Es de color
+    <strong>Rojo</strong>
+  </li>
+  <li *ngSwitchCase="'green'" [ngStyle]="{
+    'background': color,
+    'color': 'white',
+    'padding':'20px'
+  }">
+    Es de Color
+    <strong>Verde</strong>
+  </li>
+  <li *ngSwitchCase="'blue'" [ngStyle]="{
+    'background': color,
+    'color': 'white',
+    'padding':'20px'
+  }">
+    Es de Color
+    <strong>Azul</strong>
+  </li>
+</ul>
+<hr>
+<h2>Directivas Estructurales</h2>
 <button (click)="changeWorker(externalWorker=!externalWorker)">{{externalWorker ? 'Mostrar Lista de Trabajadores' : 'Mostrar Empleado'}}</button>
 <div *ngIf="externalWorker == true">
   <h3>Empleado</h3>
@@ -27,31 +73,4 @@
       <strong>Contract: </strong>{{worker.hired ? 'Contratado' : 'No esta contratado'}}</li>
   </ul>
 </div>
-<hr>
-<h3>Colores Switch</h3>
-<ul [ngSwitch]="color">
-  <li *ngSwitchCase="'red'" [ngStyle]="{
-    'background':color,
-    'color':'white',
-    'padding':'20px'
-  }">
-    Es de color
-    <strong>Rojo</strong>
-  </li>
-  <li *ngSwitchCase="'green'" [ngStyle]="{
-    'background': color,
-    'color': 'white',
-    'padding':'20px'
-  }">
-    Es de Color
-    <strong>Verde</strong>
-  </li>
-  <li *ngSwitchCase="'blue'" [ngStyle]="{
-    'background': color,
-    'color': 'white',
-    'padding':'20px'
-  }">
-    Es de Color
-    <strong>Azul</strong>
-  </li>
-</ul>
+

@@ -11,6 +11,7 @@ export class EmpleadoComponent implements OnInit {
   public workers:Array<Employee>; 
   public externalWorker:boolean;
   public color:string;
+  public colorSelected:string;
   constructor() {
     this.title = "Curso de Angular";
     this.employee = new Employee("Julio Sánchez",26,"Programador",false);
@@ -22,12 +23,16 @@ export class EmpleadoComponent implements OnInit {
     ];
     this.externalWorker = true;
     this.color = "green";
+    this.colorSelected = "#ccc";
    }
 
   ngOnInit() {
   }
   changeExternal(value){
     this.externalWorker = value;
+  };
+  logColorSelected(){
+    console.log(this.colorSelected);
   };
 
 }
