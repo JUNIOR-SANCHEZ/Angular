@@ -9,7 +9,8 @@ import { EmpleadoComponent } from './empleado/empleado.component';
 import { FrutaComponent } from './fruta/fruta.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
-import { ConversorPipe } from './pipes/conversor.pipe'
+import { ConversorPipe } from './pipes/conversor.pipe';
+import { CocheComponent } from './coche/coche.component'
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ConversorPipe } from './pipes/conversor.pipe'
     FrutaComponent,
     HomeComponent,
     ContactComponent,
-    ConversorPipe
+    ConversorPipe,
+    CocheComponent
   ],
   imports: [
     BrowserModule,
